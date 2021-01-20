@@ -17,7 +17,7 @@ const routes: Routes =
   {path:'',redirectTo:'movies',pathMatch:'full'},
   {path:'signin',component:SigninComponent},
   {path:'signup',component:SignupComponent},
-  {path:'tv',component:TvComponent,canActivate:[AuthGuardService]},
+  {path:'series',component:TvComponent,canActivate:[AuthGuardService]},
   {path:'movies',component:MoviesComponent,canActivate:[AuthGuardService]},
   {path:'moviesdetails/:id',component:MoviesdetailsComponent,canActivate:[AuthGuardService]},
 
