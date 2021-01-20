@@ -1,0 +1,68 @@
+
+
+
+@mixin boxShadow($x,$y,$b,$c) {
+    -webkit-box-shadow:$x $y $b $c;
+    -moz-box-shadow:$x $y $b $c;
+    -o-box-shadow:$x $y $b $c;
+    -ms-box-shadow:$x $y $b $c;
+    box-shadow:$x $y $b $c;
+}
+.movie{
+   @include boxShadow(0, 0, 10px,#09c );
+   height: 350px;
+    overflow: hidden;
+}
+.movie-info{
+    position: relative;
+}
+.relative{
+    position: relative;
+}
+.avg{
+    position: absolute;
+    top:0px;
+    width: 50px;
+    text-align: center;
+    right: 20px;
+    background-color: #09c;
+    padding:15px
+}
+.img-fluid{
+    height: 350px;
+    object-fit: contain;
+    object-position: left;
+}
+.movie-info{
+    position: relative;
+    height: 355px;
+}
+.more-contint{
+    position: absolute;
+    bottom: 0;
+    background: rgb(255,255,255);
+    background: rgb(255,255,255);
+background: -moz-linear-gradient(180deg, rgba(255,255,255,0) 17%, rgba(24,24,36,1) 86%);
+background: -webkit-linear-gradient(180deg, rgba(255,255,255,0) 17%, rgba(24,24,36,1) 86%);
+background: linear-gradient(180deg, rgba(255,255,255,0) 17%, rgba(24,24,36,1) 86%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#181824",GradientType=1);
+
+    width: 100%;
+    height: 20px;
+
+}
+
+.dots{
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+}
+.dots2{
+    @extend .dots;
+    -webkit-line-clamp: 3 !important;
+    
+    
+}

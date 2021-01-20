@@ -1,0 +1,26 @@
+<ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "large" color = "#09c" type = "pacman" [fullScreen] = "true"></ngx-spinner>
+
+    <div class="container text-white py-5">
+    <h1 class="text-center mb-3">Tv List</h1>
+
+    <div class="row">
+        <div *ngFor="let movie of TrendingTv"  class="col-md-6 mb-4">
+            <div class="movie">
+             <div class="row m-0">
+                 <div class="col-md-6 m-0 p-0">
+                      <img class="img-fluid" [src]="imgBaseUrl+movie.poster_path"/>
+                 </div>
+                 <div class="col-md-6 relative">
+                    <div class="avg">{{movie.vote_average}}</div>
+
+                     <div class="movie-info">
+                         <p class="py-0 pt-2 mt-5 mb-4 dots2 h3">{{movie.name}}</p>
+                         <p class="dots ">{{movie.overview}}</p>
+                         <div class="more-contint"></div>
+                     </div>
+                 </div>
+             </div>
+            </div>
+        </div>
+    </div>
+</div>

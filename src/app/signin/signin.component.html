@@ -1,0 +1,21 @@
+
+<h1 class="text-center text-white mt-5">Login Form</h1>
+<form [formGroup]="signinForm" class="w-50 m-auto py-5" (ngSubmit)="signIn()">
+   
+   
+      <div class="form-group">
+        <label class="text-white" for="">Email</label>
+        <input formControlName="email" type="text" class="form-control">
+        <div *ngIf="signinForm.controls.email.invalid&&signinForm.controls.email.touched" class="alert alert-danger mt-2">email not valid</div>
+
+      </div>
+      <div class="form-group">
+        <label class="text-white" for="">Password</label>
+        <input formControlName="password" type="password" class="form-control">
+        <div *ngIf="signinForm.controls.password.invalid&&signinForm.controls.password.touched" class="alert alert-danger mt-2">password not valid</div>
+
+      </div>
+      <a routerLink="/signup">don't have account? , Register</a>
+      <button [disabled]="signinForm.invalid" class="btn btn-primary float-right" type="submit">Login</button>
+
+</form>
