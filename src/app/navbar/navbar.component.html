@@ -8,7 +8,13 @@
            
             
             <li class="nav-item">
-                <button  (click)="logout() " class="btn btn-danger">Logout</button>
+                <button *ngIf = "loggedin() " (click)="logout() " class="btn btn-danger">Logout</button>
+            </li>
+            <li class="nav-item">
+                <button routerLink="/signin" *ngIf = "!loggedin() " (click)="hide "  class="btn btn-danger marginRight">Login</button>
+            </li>
+            <li class="nav-item">
+                <button routerLink="/signup" *ngIf = "!loggedin() " (click)="hide "  class="btn btn-danger">Register</button>
             </li>
 
             

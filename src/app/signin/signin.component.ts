@@ -24,6 +24,7 @@ export class SigninComponent implements OnInit {
       this.toastr.success(`Hello ${data.user.first_name}`, 'login successfully happenned!');
       localStorage.setItem('token',data.token)
       this._Router.navigateByUrl("/movies")
+      
     }
     else{
       this.toastr.error( 'Error occured during login!');
