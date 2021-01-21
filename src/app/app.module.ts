@@ -16,6 +16,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { ErrorComponent } from './error/error.component';
 import { TvComponent } from './tv/tv.component';
 import { MoviesdetailsComponent } from './moviesdetails/moviesdetails.component';
+import { SeriesdetailsComponent } from './seriesdetails/seriesdetails.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { MoviesdetailsComponent } from './moviesdetails/moviesdetails.component'
     ErrorComponent,
     TvComponent,
     MoviesdetailsComponent,
+    SeriesdetailsComponent,
     
   ],
   imports: [

@@ -1,14 +1,18 @@
 <ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="large" color="#09c" type="pacman" [fullScreen]="true"></ngx-spinner>
 
-<div class="container text-white py-5">
+<div *ngIf='loading == true' class="container text-white py-5">
     <div class="row">
         <div class="col-md-4">
             <img class="w-100" [src]="imgBaseUrl+moviesDetails.poster_path" >
         </div>
         <div class="col-md-8">
             <div class="moviesdetails">
-                <h3 class="p-3">{{moviesDetails.original_title}}</h3>
+                <h1 class="p-3">{{moviesDetails.original_title}}</h1>
                 <p class="lead">{{moviesDetails.overview}}</p>
+                <h4>Release Date : {{moviesDetails.release_date}}</h4>
+            </div>
+            <div class="back">
+                <a  class="btn btn-outline-danger btn-lg active" role="button" [routerLink]="['/movies']">Back to Movies</a>
             </div>
         </div>
     </div>

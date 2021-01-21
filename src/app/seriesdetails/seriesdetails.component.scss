@@ -1,0 +1,29 @@
+@mixin boxShadow($x,$y,$b,$c) {
+    -webkit-box-shadow:$x $y $b $c;
+    -moz-box-shadow:$x $y $b $c;
+    -o-box-shadow:$x $y $b $c;
+    -ms-box-shadow:$x $y $b $c;
+    box-shadow:$x $y $b $c;
+}
+.cardbox{
+   @include boxShadow(0, 0, 10px,#09c );
+    width: 15rem;
+    overflow: hidden;
+}
+.back{
+    text-align: center;
+}
+h1{
+    color: #09c !important;
+    font-weight: bold;
+}
+.seriesdetails{
+    margin-bottom: 20px;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+.margintop{
+    margin-top: 20px;
+}
