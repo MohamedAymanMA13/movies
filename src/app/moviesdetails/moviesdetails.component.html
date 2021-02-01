@@ -11,8 +11,19 @@
                 <p class="lead">{{moviesDetails.overview}}</p>
                 <h4>Release Date : {{moviesDetails.release_date}}</h4>
             </div>
-            <div class="back">
-                <a  class="btn btn-outline-danger btn-lg active" role="button" [routerLink]="['/movies']">Back to Movies</a>
+            <div class=" row">
+                <div *ngFor="let data of top4" class=" cardbox  ">
+                    <a [routerLink]="['/moviesdetails', data.id]" >
+                    <img [src]="imgBaseUrl+data.poster_path" class="card-img-top hightvalue">
+                    <div class="card-body">
+                      <h5 class="card-title back">{{data.original_title}}</h5>
+                    </div>
+                    </a>
+                </div>
+                
+            </div>
+            <div class="back margintop">
+                <a  class="btn btn-outline-danger btn-lg active back" role="button" [routerLink]="['/movies']">Back to Movies</a>
             </div>
         </div>
     </div>

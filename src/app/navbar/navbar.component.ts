@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthGuardService } from '../auth-guard.service';
 import { AuthService } from "../auth.service";
+import { ActivatedRoute } from "@angular/router";
+
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -9,10 +11,10 @@ import { AuthService } from "../auth.service";
 })
 export class NavbarComponent implements OnInit {
   
-  isShown: boolean = false ;
-  constructor(private _router:Router ,private _AuthService:AuthService ) {
-   
-
+  Signin:string="/signup"
+  constructor(private _router:Router ,private _ActivatedRoute:ActivatedRoute) {
+    this.Signin = _ActivatedRoute.snapshot.paramMap.get("/Signin");
+    
   }
   
   logout(){
@@ -24,11 +26,14 @@ export class NavbarComponent implements OnInit {
     return  localStorage.getItem('token')
     
   }
-  toggleShow() {
-
-    this.isShown = ! this.isShown;
+  isSigninRoute() {
+    return this._router.routerState.snapshot.url === '/signup';
+    // this._router.url.includes('/signup');
+  }
+  isSignupRoute() {
     
-    }
+    return this._router.url.includes('/signin');
+  }
   ngOnInit(): void {
   }
 

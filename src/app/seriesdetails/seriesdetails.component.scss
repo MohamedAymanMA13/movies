@@ -9,6 +9,9 @@
    @include boxShadow(0, 0, 10px,#09c );
     width: 15rem;
     overflow: hidden;
+    height: 280px;
+    width: 153px !important;
+    margin: 18px;
 }
 .back{
     text-align: center;
@@ -26,4 +29,8 @@ a{
 }
 .margintop{
     margin-top: 20px;
+}
+.hightvalue{
+    height: 200px;
+    object-fit: cover;
 }

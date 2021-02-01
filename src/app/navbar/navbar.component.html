@@ -11,10 +11,10 @@
                 <button *ngIf = "loggedin() " (click)="logout() " class="btn btn-danger">Logout</button>
             </li>
             <li class="nav-item">
-                <button routerLink="/signin" *ngIf = "!loggedin() " (click)="hide "  class="btn btn-danger marginRight">Login</button>
+                <button routerLink="/signin" *ngIf = "!loggedin() then  "   class="btn btn-danger marginRight">Login</button>
             </li>
             <li class="nav-item">
-                <button routerLink="/signup" *ngIf = "!loggedin() " (click)="hide "  class="btn btn-danger">Register</button>
+                <button routerLink="/signup" *ngIf = "!loggedin() "   class="btn btn-danger">Register</button>
             </li>
 
             
