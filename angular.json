@@ -24,9 +24,9 @@
             "tsConfig": "tsconfig.app.json",
             "aot": true,
             "assets": [
-              "src/favicon.ico",
-              "src/assets",
-              "src/_redirects"
+              "favicon.ico",
+              "assets",
+              "_redirects"
             ],
             "styles": [
               "node_modules/bootstrap/scss/bootstrap.scss",
