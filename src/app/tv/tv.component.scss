@@ -28,10 +28,11 @@
     background-color: #09c;
     padding:15px
 }
-.img-fluid{
+.img-edit{
     height: 350px;
     object-fit: contain;
-    object-position: left;
+    object-position: center;
+    width: 100%;
 }
 .movie-info{
     position: relative;
